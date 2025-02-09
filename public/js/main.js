@@ -8,7 +8,7 @@ const messageTwo = document.querySelector('#message-two');
 
 
 async function fetchWeather(location) {
-    const response = await fetch(`http://localhost:3000/weather?address=${encodeURIComponent(location)}`);
+    const response = await fetch(`/weather?address=${encodeURIComponent(location)}`);
     const data = await response.json();
     // console.log(data);
     if (data.error) {
